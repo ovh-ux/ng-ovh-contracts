@@ -1,9 +1,9 @@
 /**
  * @ngdoc overview
- * @name contracts
+ * @name ovh-angular-contracts
  * @description
  * # contracts
  *
  * Main module of the application.
  */
-angular.module('ovh-angular-contracts', []);
+angular.module("ovh-angular-contracts", []);

@@ -37,6 +37,18 @@ to hear from you!
 
 Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-contracts/blob/master/CONTRIBUTING.md)
 
+## Run the tests
+ 
+```
+npm test
+```
+ 
+## Build the documentation
+ 
+```
+grunt ngdocs
+```
+
 # Related links
 
  * Contribute: https://github.com/ovh-ux/ovh-angular-contracts

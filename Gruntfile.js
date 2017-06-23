@@ -1,45 +1,45 @@
 // Generated on 2015-09-15 using generator-ovh-angular-component 0.0.0
 module.exports = function (grunt) {
-    'use strict';
-    require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
+    "use strict";
+    require("matchdep").filterAll("grunt-*").forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
-        pkg      : grunt.file.readJSON('package.json'),
-        bower    : grunt.file.readJSON('bower.json'),
-        distdir  : 'dist',
-        srcdir   : 'src',
-        builddir : '.work/.tmp',
-        name     : grunt.file.readJSON('package.json').name || 'ovh-angular-contracts',   // module name
+        pkg: grunt.file.readJSON("package.json"),
+        bower: grunt.file.readJSON("bower.json"),
+        distdir: "dist",
+        srcdir: "src",
+        builddir: ".work/.tmp",
+        name: grunt.file.readJSON("package.json").name || "ovh-angular-contracts", // module name
 
         // Clean
-        clean      : {
-            dist : {
-                src : [
-                    '<%= builddir %>',
-                    '<%= distdir %>'
+        clean: {
+            dist: {
+                src: [
+                    "<%= builddir %>",
+                    "<%= distdir %>"
                 ]
             }
         },
 
         // Copy files
-        copy : {
+        copy: {
             // Copy concatened JS file from builddir to dist/
-            dist : {
-                files : {
-                    '<%= distdir %>/ovh-angular-contracts.js' : '<%= builddir %>/ovh-angular-contracts.js'
+            dist: {
+                files: {
+                    "<%= distdir %>/ovh-angular-contracts.js": "<%= builddir %>/ovh-angular-contracts.js"
                 }
             }
         },
 
         // Concatenation
-        concat     : {
-            dist : {
-                files : {
-                    '<%= builddir %>/ovh-angular-contracts.js' : [
-                        '<%= srcdir %>/ovh-angular-contracts.js',
-                        '<%= srcdir %>/**/*.js',
-                        '!<%= srcdir %>/**/*.spec.js',
-                        '<%= builddir %>/tpls.js'
+        concat: {
+            dist: {
+                files: {
+                    "<%= builddir %>/ovh-angular-contracts.js": [
+                        "<%= srcdir %>/ovh-angular-contracts.js",
+                        "<%= srcdir %>/**/*.js",
+                        "!<%= srcdir %>/**/*.spec.js",
+                        "<%= builddir %>/tpls.js"
                     ]
                 }
             }
@@ -49,19 +49,19 @@ module.exports = function (grunt) {
         ngAnnotate: {
             dist: {
                 files: {
-                    '<%= builddir %>/ovh-angular-contracts.js' : ['<%= builddir %>/ovh-angular-contracts.js']
+                    "<%= builddir %>/ovh-angular-contracts.js": ["<%= builddir %>/ovh-angular-contracts.js"]
                 }
             }
         },
 
         // Obfuscate
-        uglify   : {
-            js : {
-                options : {
-                    banner : '/*! ovh-angular-contracts - <%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        uglify: {
+            js: {
+                options: {
+                    banner: '/*! ovh-angular-contracts - <%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
                 },
-                files   : {
-                    '<%= distdir %>/ovh-angular-contracts.min.js' : ['<%= builddir %>/ovh-angular-contracts.js']
+                files: {
+                    "<%= distdir %>/ovh-angular-contracts.min.js": ["<%= builddir %>/ovh-angular-contracts.js"]
                 }
             }
         },
@@ -69,8 +69,8 @@ module.exports = function (grunt) {
 
         ngtemplates: {
             options: {
-                module: 'ovh-angular-contracts',
-                url:    function (url) { return "js/ovh-angular-contracts/" + url; },
+                module: "ovh-angular-contracts",
+                url: function (url) { return "js/ovh-angular-contracts/" + url; },
                 htmlmin: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
@@ -83,70 +83,70 @@ module.exports = function (grunt) {
                 }
             },
             dist: {
-                cwd    : '<%= srcdir %>/',
-                src    : ['**/*.html'],
-                dest   : '<%= builddir %>/tpls.js'
+                cwd: "<%= srcdir %>/",
+                src: ["**/*.html"],
+                dest: "<%= builddir %>/tpls.js"
             }
         },
 
         // JS Check
-        jshint     : {
-            options : {
-                jshintrc : '.jshintrc',
-                reporter: require('jshint-stylish')
+        jshint: {
+            options: {
+                jshintrc: ".jshintrc",
+                reporter: require("jshint-stylish")
             },
-            js      : [
-                '<%= srcdir %>/*.js',
-                '<%= srcdir %>/*/*.js',
-                '!<%= srcdir %>/**/*.spec.js'
+            js: [
+                "<%= srcdir %>/*.js",
+                "<%= srcdir %>/*/*.js",
+                "!<%= srcdir %>/**/*.spec.js"
             ]
         },
 
         // Check complexity
-        complexity : {
-            generic : {
-                src     : [
-                    '<%= srcdir %>/**/*.js',
-                    '!<%= srcdir %>/**/*.spec.js'
+        complexity: {
+            generic: {
+                src: [
+                    "<%= srcdir %>/**/*.js",
+                    "!<%= srcdir %>/**/*.spec.js"
                 ],
-                options : {
-                    errorsOnly      : false,
-                    cyclomatic      : 12,
-                    halstead        : 45,
-                    maintainability : 82
+                options: {
+                    errorsOnly: false,
+                    cyclomatic: 12,
+                    halstead: 45,
+                    maintainability: 82
                 }
             }
         },
 
         // Watch
-        delta : {
+        delta: {
             dist: {
-                files : ['<%= srcdir %>/**/*', '!<%= srcdir %>/**/*.spec.js'],
-                tasks: ['buildProd']
+                files: ["<%= srcdir %>/**/*", "!<%= srcdir %>/**/*.spec.js"],
+                tasks: ["buildProd"]
             },
             test: {
-                files : ['<%= srcdir %>/**/*.spec.js'],
-                tasks: ['test']
+                files: ["<%= srcdir %>/**/*.spec.js"],
+                tasks: ["test"]
             }
         },
 
         // To release
-        bump       : {
-            options : {
-                pushTo: 'origin',
-                files         : [
-                    'package.json',
-                    'bower.json'
+        bump: {
+            options: {
+                pushTo: "origin",
+                files: [
+                    "package.json",
+                    "bower.json"
                 ],
-                updateConfigs : ['pkg', 'bower'],
-                commitFiles   : ['-a']
+                updateConfigs: ["pkg", "bower"],
+                commitFiles: ["-a"]
             }
         },
 
         // Testing
         karma: {
             unit: {
-                configFile: 'karma.conf.js',
+                configFile: "karma.conf.js",
                 singleRun: true
             }
         },
@@ -154,14 +154,24 @@ module.exports = function (grunt) {
         // Documentation
         ngdocs: {
             options: {
-                dest: 'docs',
+                dest: "docs",
                 html5Mode: false,
-                title: 'ovh-angular-contracts'
+                startPage: "docs/ovh-angular-contracts.directive:contracts",
+                title: "ovh-angular-contracts",
+                sourceLink: "https://github.com/ovh-ux/<%= name %>/blob/master/{{file}}#L{{codeline}}"
             },
             docs: {
-                src: ['src/**/*.js'],
-                title: 'docs'
+                src: ["src/**/*.js"],
+                title: "docs",
+                api: true
             }
+        },
+
+        eslint: {
+            options: {
+                configFile: "./.eslintrc.json"
+            },
+            target: ["src/**/!(*.spec|*.integration).js", "Gruntfile.js"]
         }
     });
 
@@ -173,7 +183,9 @@ module.exports = function (grunt) {
         grunt.task.run([
             "clean",
             "jshint",
-            "complexity"
+            "eslint",
+            "complexity",
+            "karma"
         ]);
     });
 
