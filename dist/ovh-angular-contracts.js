@@ -18,7 +18,7 @@ angular.module("ovh-angular-contracts").directive("contracts", function () {
     "use strict";
     return {
         restrict: "EA",
-        templateUrl: "js/ovh-angular-contracts/ovh-angular-contracts.html",
+        templateUrl: "ovh-angular-contracts.html",
         scope: {
             contracts: "=",
             agree: "=contractsValidated"
