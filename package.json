@@ -4,7 +4,7 @@
   "description": "Component to correctly show contracts in OVH control panels",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
-  "repository": "ovh-ux/ovh-angular-checkbox-table",
+  "repository": "ovh-ux/ovh-angular-contracts",
   "scripts": {
     "test": "grunt test"
   },
@@ -14,7 +14,10 @@
   "main": "./dist/ovh-angular-contracts.min.js",
   "devDependencies": {
     "autoprefixer-core": "~5.2.0",
+    "eslint": "^4.0.0",
+    "eslint-config-ovh": "^0.1.1",
     "grunt": "0.4.x",
+    "grunt-angular-templates": "^0.5.7",
     "grunt-bump": "~0.5.0",
     "grunt-complexity": "~0.1.0",
     "grunt-contrib-clean": "~0.6.0",
@@ -26,15 +29,18 @@
     "grunt-contrib-less": "~1.0.0",
     "grunt-contrib-uglify": "~0.9.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-eslint": "^20.0.0",
     "grunt-karma": "~0.12.0",
     "grunt-ng-annotate": "~0.10.0",
-    "grunt-angular-templates": "^0.5.7",
     "grunt-ngdocs": "^0.2.5",
     "grunt-postcss": "~0.6.0",
+    "jasmine-core": "^2.6.4",
     "jshint-stylish": "~2.0.0",
     "karma": "~0.13.0",
     "karma-jasmine": "~0.3.0",
-    "karma-phantomjs-launcher": "~0.2.0",
-    "matchdep": "^0.3.0"
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "matchdep": "^0.3.0",
+    "phantomjs-prebuilt": "2.1.7"
   }
 }

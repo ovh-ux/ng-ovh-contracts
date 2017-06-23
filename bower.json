@@ -3,7 +3,10 @@
   "version": "1.1.1",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
-  "repository": "ovh-ux/ovh-angular-checkbox-table",
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/ovh-ux/ovh-angular-contacts.git"
+  },
   "description": "Component to correctly show contracts in OVH control panels",
   "keywords": [
     "angular"
@@ -20,6 +23,7 @@
     "src",
     "karma.conf.js",
     ".jshintrc",
+    ".eslintrc.json",
     ".editorconfig"
   ],
   "dependencies": {
