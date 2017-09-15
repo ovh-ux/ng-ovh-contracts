@@ -12,13 +12,11 @@
             </tr>
         </table>
 
-        <div class="contracts-agree-ctnr">
-            <flat-checkbox>
+        <div class="checkbox">
+            <label for="validateContract">
                 <input type="checkbox" id="validateContract"
                        name="validateContract"
                        data-ng-model="ContractsCtrl.agree" />
-            </flat-checkbox>
-            <label class="pointer left-space-m8 bottom-space-m0" for="validateContract">
                 <span data-ng-if="ContractsCtrl.contracts.length > 1" data-translate="contracts_agree"></span>
                 <span data-ng-if="ContractsCtrl.contracts.length === 1" data-translate="contract_agree"></span>
             </label>
@@ -64,23 +62,14 @@
             <i class="fa fa-file-pdf-o fs14"></i> <span data-translate="contract_download" data-translate-values="{'id': ContractsCtrl.currentContract.name}"></span>
         </a>
 
-        <div class="contracts-agree-ctnr top-space-m16 bottom-space-m16 space-p16">
-            <!-- <div data-ng-if="ContractsCtrl.disabled == false"> -->
-                <flat-checkbox>
-                    <input type="checkbox" id="validateContract"
-                           name="validateContract"
-                           data-ng-model="ContractsCtrl.agree" />
-                </flat-checkbox>
-                <label class="pointer left-space-m8 bottom-space-m0" for="validateContract">
-                    <span data-ng-if="ContractsCtrl.contracts.length > 1" data-translate="contracts_agree"></span>
-                    <span data-ng-if="ContractsCtrl.contracts.length === 1" data-translate="contract_agree"></span>
-                </label>
-            <!-- </div> -->
-
-            <!-- <p class="red bold"
-                  data-ng-show="ContractsCtrl.disabled == true">
-                {{'contract_help' | translate}}
-            </p> -->
+        <div class="checkbox my-3 p-3">
+            <label for="validateContract">
+                <input type="checkbox" id="validateContract"
+                       name="validateContract"
+                       data-ng-model="ContractsCtrl.agree" />
+                <span data-ng-if="ContractsCtrl.contracts.length > 1" data-translate="contracts_agree"></span>
+                <span data-ng-if="ContractsCtrl.contracts.length === 1" data-translate="contract_agree"></span>
+            </label>
         </div>
     </div>
 </div>
