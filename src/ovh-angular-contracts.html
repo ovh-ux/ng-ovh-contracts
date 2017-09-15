@@ -5,8 +5,8 @@
         <table class="table table-striped table-bordered">
             <tr data-ng-repeat="contract in ContractsCtrl.contracts">
                 <td>
-                    <a class="bold" target="_blank" data-ng-href="{{contract.url || contract.pdf}}">
-                        <i class="fa fa-file-pdf-o fs14"></i> {{contract.name}}
+                    <a target="_blank" data-ng-href="{{contract.url || contract.pdf}}">
+                        <i class="fa fa-file-pdf-o"></i> {{contract.name}}
                     </a>
                 </td>
             </tr>
@@ -25,10 +25,10 @@
 
     <div data-ng-if="ContractsCtrl.fullText === true">
 
-        <p class="bold" data-ng-if="ContractsCtrl.contracts.length > 1" data-translate="contracts_list_title" data-translate-values="{'nbr': ContractsCtrl.contracts.length}"></p>
-        <p class="bold" data-ng-if="ContractsCtrl.contracts.length === 1" data-translate="contract_list_title"></p>
+        <p data-ng-if="ContractsCtrl.contracts.length > 1" data-translate="contracts_list_title" data-translate-values="{'nbr': ContractsCtrl.contracts.length}"></p>
+        <p data-ng-if="ContractsCtrl.contracts.length === 1" data-translate="contract_list_title"></p>
 
-        <div class="contracts-list clearfix shadow-z-1">
+        <div class="contracts-list clearfix">
             <uib-accordion close-others="false" class="clearfix">
                 <uib-accordion-group heading="{{contract.name}}" is-open="true" data-ng-repeat="contract in ContractsCtrl.contracts" id="contract-{{$index}}">
                     <pre class="contracts-content">{{contract.content || contract.text}}</pre>
@@ -36,7 +36,7 @@
             </uib-accordion>
         </div>
 
-        <div class="contracts-breadcrumb top-space-m8 bottom-space-m4 text-center clearfix" role="navigation" data-ng-show="ContractsCtrl.contracts.length > 1">
+        <div class="contracts-breadcrumb my-2 text-center clearfix" role="navigation" data-ng-show="ContractsCtrl.contracts.length > 1">
             <a class="pull-left contracts-breadcrumb-navigate contracts-breadcrumb-navigate-previous">
                 <i class="glyphicon glyphicon-chevron-left"></i>
                 <span data-translate="contract_previous"></span>
@@ -57,9 +57,9 @@
             </a>
         </div>
 
-        <a title="{{contract.name}}" target="_blank" class="block text-center text-muted fs10 top-space-m4 bottom-space-m4"
+        <a title="{{contract.name}}" target="_blank" class="block text-center text-muted my-2"
            data-ng-href="{{ContractsCtrl.currentContract.url || ContractsCtrl.currentContract.pdf}}" data-ng-if="ContractsCtrl.currentContract.name">
-            <i class="fa fa-file-pdf-o fs14"></i> <span data-translate="contract_download" data-translate-values="{'id': ContractsCtrl.currentContract.name}"></span>
+            <i class="fa fa-file-pdf-o"></i> <span data-translate="contract_download" data-translate-values="{'id': ContractsCtrl.currentContract.name}"></span>
         </a>
 
         <div class="checkbox my-3 p-3">
