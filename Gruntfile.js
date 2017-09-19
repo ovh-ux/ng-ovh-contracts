@@ -66,11 +66,9 @@ module.exports = function (grunt) {
             }
         },
 
-
         ngtemplates: {
             options: {
                 module: "ovh-angular-contracts",
-                url: function (url) { return "js/ovh-angular-contracts/" + url; },
                 htmlmin: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
