@@ -27,34 +27,38 @@
         }
     }
 
-    .contracts-breadcrumb ul {
-        margin: 0 5px;
-        display: inline-block;
-        width: 60%;
+    .contracts-breadcrumb {
+        margin: 5px 0;
 
-        li {
+        ul {
+            margin: 0 5px;
             display: inline-block;
+            width: 60%;
 
-            a {
+            li {
                 display: inline-block;
-                margin: 5px;
-                background-color: #AAA;
-                width: 10px;
-                height: 10px;
-                border-radius: 5px;
-                transition: all 300ms;
-                cursor: pointer;
 
-                &.active {
-                    background-color: #38A7C3;
-                }
+                a {
+                    display: inline-block;
+                    margin: 5px;
+                    background-color: #AAA;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 5px;
+                    transition: all 300ms;
+                    cursor: pointer;
 
-                &.active:hover {
-                    background-color: #41D7F3;
-                }
+                    &.active {
+                        background-color: #38A7C3;
+                    }
 
-                &:not(.active):hover {
-                    background-color: #000;
+                    &.active:hover {
+                        background-color: #41D7F3;
+                    }
+
+                    &:not(.active):hover {
+                        background-color: #000;
+                    }
                 }
             }
         }
@@ -62,6 +66,12 @@
 
     .contracts-breadcrumb a {
         cursor: pointer;
+    }
+
+    .contracts-link {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
     }
 
 }
