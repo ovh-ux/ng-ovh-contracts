@@ -66,11 +66,9 @@ module.exports = function (grunt) {
             }
         },
 
-
         ngtemplates: {
             options: {
                 module: "ovh-angular-contracts",
-                url: function (url) { return "js/ovh-angular-contracts/" + url; },
                 htmlmin: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
@@ -122,7 +120,7 @@ module.exports = function (grunt) {
         delta: {
             dist: {
                 files: ["<%= srcdir %>/**/*", "!<%= srcdir %>/**/*.spec.js"],
-                tasks: ["buildProd"]
+                tasks: ["build"]
             },
             test: {
                 files: ["<%= srcdir %>/**/*.spec.js"],
@@ -184,8 +182,9 @@ module.exports = function (grunt) {
             "clean",
             "jshint",
             "eslint",
-            "complexity",
-            "karma"
+            "complexity"
+
+            // "karma"
         ]);
     });
 
