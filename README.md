@@ -10,44 +10,22 @@ Component to correctly show contracts in OVH control panel
 
 ## Installation
 
-### Bower
+### Yarn
 
-    bower install ovh-angular-contracts --save
-
-### NPM
-
-    npm install ovh-angular-contracts --save
-
-- Include the LESS file in your app;
-```css
-@import 'ovh-angular-contracts/less/ovh-angular-contracts.less';
-```
+    yarn add ovh-angular-contracts
 
 ### Get the sources
 
 ```bash
     git clone https://github.com/ovh-ux/ovh-angular-contracts.git
     cd ovh-angular-contracts
-    npm install
-    bower install
+    yarn install
 ```
 
 You've developed a new cool feature? Fixed an annoying bug? We'd be happy
 to hear from you!
 
 Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-contracts/blob/master/CONTRIBUTING.md)
-
-## Run the tests
- 
-```
-npm test
-```
- 
-## Build the documentation
- 
-```
-grunt ngdocs
-```
 
 # Related links
 
