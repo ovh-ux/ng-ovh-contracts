@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "Component to correctly show contracts in OVH control panels",
   "keywords": [
-    "angular"
+    "angular",
+    "contracts",
+    "ovh"
   ],
   "repository": "ovh-ux/ovh-angular-contracts",
   "license": "BSD-3-Clause",
@@ -18,7 +20,7 @@
     "lint": "run-p lint:html lint:css lint:js",
     "lint:css": "stylelint 'src/**/*.less' --fix",
     "lint:html": "htmlhint 'src/**/*.html'",
-    "lint:js": "eslint --quiet --fix ./src",
+    "lint:js": "eslint --quiet --fix src",
     "prepare": "rollup -c",
     "test": "yarn run lint",
     "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",

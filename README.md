@@ -1,38 +1,41 @@
-# OVH Angular contracts
+# ovh-angular-contracts
 
-![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
+> OVH Angular Contracts Module
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-angular-contracts.svg)](https://travis-ci.org/ovh-ux/ovh-angular-contracts)
-
-[![NPM](https://nodei.co/npm/ovh-angular-contracts.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-angular-contracts/)
+[![Downloads](https://badgen.net/npm/dt/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts) [![Dependencies](https://badgen.net/david/dep/ovh-ux/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts?activeTab=dependencies) [![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts?activeTab=dependencies) [![Gitter](https://badgen.net/badge/gitter/ovh-ux/blue?icon=gitter)](https://gitter.im/ovh/ux)
 
 Component to correctly show contracts in OVH control panel
 
-## Installation
+## Install
 
-### Yarn
-
-    yarn add ovh-angular-contracts
-
-### Get the sources
-
-```bash
-    git clone https://github.com/ovh-ux/ovh-angular-contracts.git
-    cd ovh-angular-contracts
-    yarn install
+```sh
+yarn add ovh-angular-contracts
 ```
 
-You've developed a new cool feature? Fixed an annoying bug? We'd be happy
-to hear from you!
+## Usage
 
-Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-contracts/blob/master/CONTRIBUTING.md)
+```js
+import 'angular';
+import 'ovh-angular-contracts';
 
-# Related links
+angular
+  .module('myApp', [
+    …,
+    'ovh-angular-contracts';
+    …,
+  ]);
+```
 
- * Contribute: https://github.com/ovh-ux/ovh-angular-contracts
- * Report bugs: https://github.com/ovh-ux/ovh-angular-contracts/issues
- * Get latest version: https://github.com/ovh-ux/ovh-angular-contracts
+## Test
 
-# License
+```sh
+yarn test
+```
 
-See https://github.com/ovh-ux/ovh-angular-contracts/blob/master/LICENSE
+## Contributing
+
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ovh-angular-contracts/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ovh-angular-contracts/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
+
+## License
+
+[BSD-3-Clause](LICENSE) © OVH SAS

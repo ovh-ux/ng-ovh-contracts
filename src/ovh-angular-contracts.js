@@ -21,7 +21,7 @@ angular
     'pascalprecht.translate',
     'ui.bootstrap',
   ])
-    .directive('contracts', contracts)
-    .run(/* @ngTranslationsInject ./translations */);
+  .directive('contracts', contracts)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;
