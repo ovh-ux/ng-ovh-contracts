@@ -8,6 +8,9 @@
   "repository": "ovh-ux/ovh-angular-contracts",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/cjs/ovh-angular-contracts.js",
   "scripts": {
     "build": "rollup -c",
