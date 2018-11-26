@@ -14,7 +14,7 @@ import contracts from './ovh-angular-contracts.directive';
 
 import './ovh-angular-contracts.less';
 
-const moduleName = 'ovh-angular-contracts';
+const moduleName = 'ovhAngularContracts';
 
 angular
   .module(moduleName, [

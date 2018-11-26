@@ -9,19 +9,19 @@ Component to correctly show contracts in OVH control panel
 ## Install
 
 ```sh
-yarn add ovh-angular-contracts
+yarn add @ovh-ux/ovh-angular-contracts
 ```
 
 ## Usage
 
 ```js
 import 'angular';
-import 'ovh-angular-contracts';
+import '@ovh-ux/ovh-angular-contracts';
 
 angular
   .module('myApp', [
     …,
-    'ovh-angular-contracts';
+    'ovhAngularContracts';
     …,
   ]);
 ```

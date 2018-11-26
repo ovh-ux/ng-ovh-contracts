@@ -1,5 +1,5 @@
 {
-  "name": "ovh-angular-contracts",
+  "name": "@ovh-ux/ovh-angular-contracts",
   "version": "2.0.0",
   "description": "Component to correctly show contracts in OVH control panels",
   "keywords": [
