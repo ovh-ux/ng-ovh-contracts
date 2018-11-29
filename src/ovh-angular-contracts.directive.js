@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import controller from './ovh-angular-contracts.controller';
 import template from './ovh-angular-contracts.html';
 
 export default function () {
@@ -10,14 +11,11 @@ export default function () {
       contracts: '=',
       agree: '=contractsValidated',
     },
-    controller() {
-      this.disabled = true;
-    },
+    controller,
     controllerAs: 'ContractsCtrl',
     bindToController: true,
     link($scope, $elm, $attr, ContractsCtrl) {
-      /* eslint-disable no-param-reassign */
-      ContractsCtrl.fullText = $attr.fullText === 'true' || $attr.fullText === undefined;
+      ContractsCtrl.setFullText($attr.fullText === 'true' || $attr.fullText === undefined);
 
       const scrollToOptions = {
         easing: 'swing',
@@ -38,8 +36,8 @@ export default function () {
         let scrollItems;
         let initialOffSet;
 
-        [ContractsCtrl.currentContract] = ContractsCtrl.contracts;
-        ContractsCtrl.disabled = true;
+        ContractsCtrl.setCurrentContract(ContractsCtrl.getContractAtIndex(0));
+        ContractsCtrl.disable();
 
 
         // Fake Anchor
@@ -59,7 +57,7 @@ export default function () {
 
           if ((elemDiff === elemHeight) || (elemDiff - elemHeight < 5)) {
             $scope.$apply(() => {
-              ContractsCtrl.disabled = false;
+              ContractsCtrl.enable();
             });
           }
 
@@ -67,7 +65,6 @@ export default function () {
           const fromTop = ($elm.find('.contracts-list').height() / 2) + $elm.find('.contracts-list').offset().top;
 
           if (scrollItems === undefined) {
-            // eslint-disable-next-line array-callback-return, consistent-return
             scrollItems = menuItems.map(() => {
               const item = $($(this).attr('data-fake-href'));
               if (initialOffSet === undefined) {
@@ -76,15 +73,16 @@ export default function () {
               if (item.length) {
                 return item;
               }
+              return undefined;
             });
           }
 
           // Get id of current scroll item
-          // eslint-disable-next-line array-callback-return, consistent-return
           let cur = scrollItems.map(() => {
             if ($(this).offset().top <= fromTop) {
               return this;
             }
+            return undefined;
           });
 
           // Get the id of the current element
@@ -92,10 +90,18 @@ export default function () {
           const id = cur && cur.length ? cur[0].id : 'contract-0';
           if (lastId !== id) {
             lastId = id;
+
             $scope.$apply(() => {
-              ContractsCtrl.currentContract = ContractsCtrl.contracts[id.split('-')[1]];
+              ContractsCtrl.setCurrentContract(
+                ContractsCtrl.getContractAtIndex(parseInt(lastId.split('-')[1], 10)),
+              );
             });
-            menuItems.removeClass('active').parent().end().filter(`[data-fake-href=#${id}]`)
+
+            menuItems
+              .removeClass('active')
+              .parent()
+              .end()
+              .filter(`[data-fake-href="#${id}"]`)
               .addClass('active');
           }
         });
@@ -112,13 +118,17 @@ export default function () {
           }
         });
 
-        menuItems.removeClass('active').parent().end().filter(`[data-fake-href=#${lastId}]`)
+        menuItems
+          .removeClass('active')
+          .parent()
+          .end()
+          .filter(`[data-fake-href="#${lastId}"]`)
           .addClass('active');
+
         window.setTimeout(() => {
           $elm.find('.contracts-list').stop().scrollTo(0);
           menuItems = topMenu.find('a'); // because ngRepeat is not already here ;p
         }, 300);
-        /* eslint-enable no-param-reassign */
       };
 
       $scope.$watch(() => ContractsCtrl.contracts, (nv) => {
