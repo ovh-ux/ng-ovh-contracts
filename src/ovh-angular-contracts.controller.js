@@ -3,7 +3,6 @@ export default class {
     this.disabled = true;
     this.currentContract = undefined;
     this.fullText = '';
-    this.contracts = [];
   }
 
   enable() {
