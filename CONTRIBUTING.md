@@ -4,14 +4,12 @@ This project accepts contributions. In order to contribute, you should
 pay attention to a few things:
 
 1. your code must follow the coding style rules
-2. your code must be unit-tested
-3. your code must be documented
-4. your work must be signed (see below)
-5. you may contribute through GitHub Pull Requests
+2. your code must be documented
+3. you may contribute through GitHub Pull Requests
 
 # Coding and documentation Style
 
-Refer to [https://github.com/ovh-ux/eslint-config-ovh](https://github.com/ovh-ux/eslint-config-ovh)
+Refer to [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 
 # Submitting Modifications
 
