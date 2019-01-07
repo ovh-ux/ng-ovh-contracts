@@ -1,6 +1,6 @@
 /**
  * @ngdoc overview
- * @name ovh-angular-contracts
+ * @name ng-ovh-contracts
  * @description
  * # contracts
  *
@@ -10,18 +10,18 @@ import angular from 'angular';
 import 'angular-translate';
 import 'angular-ui-bootstrap';
 
-import contracts from './ovh-angular-contracts.directive';
+import directive from './directive';
 
-import './ovh-angular-contracts.less';
+import './index.less';
 
-const moduleName = 'ovhAngularContracts';
+const moduleName = 'ngOvhContracts';
 
 angular
   .module(moduleName, [
     'pascalprecht.translate',
     'ui.bootstrap',
   ])
-  .directive('contracts', contracts)
+  .directive('contracts', directive)
   .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

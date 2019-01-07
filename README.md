@@ -1,25 +1,23 @@
-# ovh-angular-contracts
+# ng-ovh-contracts
 
-> OVH Angular Contracts Module
+> Component to correctly show contracts in OVH control panel
 
-[![Downloads](https://badgen.net/npm/dt/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts) [![Dependencies](https://badgen.net/david/dep/ovh-ux/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts?activeTab=dependencies) [![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ovh-angular-contracts)](https://npmjs.com/package/ovh-angular-contracts?activeTab=dependencies) [![Gitter](https://badgen.net/badge/gitter/ovh-ux/blue?icon=gitter)](https://gitter.im/ovh/ux)
-
-Component to correctly show contracts in OVH control panel
+[![Downloads](https://badgen.net/npm/dt/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts) [![Dependencies](https://badgen.net/david/dep/ovh-ux/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts?activeTab=dependencies) [![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts?activeTab=dependencies) [![Gitter](https://badgen.net/badge/gitter/ovh-ux/blue?icon=gitter)](https://gitter.im/ovh/ux)
 
 ## Install
 
 ```sh
-yarn add @ovh-ux/ovh-angular-contracts
+yarn add @ovh-ux/ng-ovh-contracts
 ```
 
 ## Usage
 
 ```js
 import angular from 'angular';
-import '@ovh-ux/ovh-angular-contracts';
+import '@ovh-ux/ng-ovh-contracts';
 
 angular
-  .module('myApp', ['ovhAngularContracts']);
+  .module('myApp', ['ngOvhContracts']);
 ```
 
 ## Test
@@ -30,7 +28,7 @@ yarn test
 
 ## Contributing
 
-Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ovh-angular-contracts/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ovh-angular-contracts/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ng-ovh-contracts/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ng-ovh-contracts/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
 
 ## License
 
