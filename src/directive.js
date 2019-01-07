@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-import controller from './ovh-angular-contracts.controller';
-import template from './ovh-angular-contracts.html';
+import controller from './controller';
+import template from './template.html';
 
 export default function () {
   return {
