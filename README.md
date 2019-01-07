@@ -15,15 +15,11 @@ yarn add @ovh-ux/ovh-angular-contracts
 ## Usage
 
 ```js
-import 'angular';
+import angular from 'angular';
 import '@ovh-ux/ovh-angular-contracts';
 
 angular
-  .module('myApp', [
-    …,
-    'ovhAngularContracts';
-    …,
-  ]);
+  .module('myApp', ['ovhAngularContracts']);
 ```
 
 ## Test
