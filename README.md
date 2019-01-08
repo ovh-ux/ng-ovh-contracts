@@ -1,60 +1,35 @@
-# OVH Angular contracts
+# ng-ovh-contracts
 
-![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
+> Component to correctly show contracts in OVH control panel
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-angular-contracts.svg)](https://travis-ci.org/ovh-ux/ovh-angular-contracts)
+[![Downloads](https://badgen.net/npm/dt/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts) [![Dependencies](https://badgen.net/david/dep/ovh-ux/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts?activeTab=dependencies) [![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ng-ovh-contracts)](https://npmjs.com/package/ng-ovh-contracts?activeTab=dependencies) [![Gitter](https://badgen.net/badge/gitter/ovh-ux/blue?icon=gitter)](https://gitter.im/ovh/ux)
 
-[![NPM](https://nodei.co/npm/ovh-angular-contracts.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-angular-contracts/)
+## Install
 
-Component to correctly show contracts in OVH control panel
-
-## Installation
-
-### Bower
-
-    bower install ovh-angular-contracts --save
-
-### NPM
-
-    npm install ovh-angular-contracts --save
-
-- Include the LESS file in your app;
-```css
-@import 'ovh-angular-contracts/less/ovh-angular-contracts.less';
+```sh
+yarn add @ovh-ux/ng-ovh-contracts
 ```
 
-### Get the sources
+## Usage
 
-```bash
-    git clone https://github.com/ovh-ux/ovh-angular-contracts.git
-    cd ovh-angular-contracts
-    npm install
-    bower install
+```js
+import angular from 'angular';
+import '@ovh-ux/ng-ovh-contracts';
+
+angular
+  .module('myApp', ['ngOvhContracts']);
 ```
 
-You've developed a new cool feature? Fixed an annoying bug? We'd be happy
-to hear from you!
+## Test
 
-Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-contracts/blob/master/CONTRIBUTING.md)
-
-## Run the tests
- 
-```
-npm test
-```
- 
-## Build the documentation
- 
-```
-grunt ngdocs
+```sh
+yarn test
 ```
 
-# Related links
+## Contributing
 
- * Contribute: https://github.com/ovh-ux/ovh-angular-contracts
- * Report bugs: https://github.com/ovh-ux/ovh-angular-contracts/issues
- * Get latest version: https://github.com/ovh-ux/ovh-angular-contracts
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ng-ovh-contracts/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ng-ovh-contracts/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
 
-# License
+## License
 
-See https://github.com/ovh-ux/ovh-angular-contracts/blob/master/LICENSE
+[BSD-3-Clause](LICENSE) © OVH SAS

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translations>
+   <translation id="contract_agree" qtlid="250095">J'ai lu et j'accepte le contrat</translation>
+   <translation id="contracts_agree" qtlid="194489">J'ai lu et j'accepte les contrats</translation>
+   <translation id="contract_list_title" qtlid="180408">Il y a 1 contrat à consulter.</translation>
+   <translation id="contracts_list_title" qtlid="250108">Il y a {{nbr}} contrats à consulter.</translation>
+   <translation id="contract_next" qtlid="17743">Suivant</translation>
+   <translation id="contract_previous" qtlid="17431">Précédent</translation>
+   <translation id="contract_download" qtlid="250082">Ouvrir le contrat "{{id}}" en PDF</translation>
+</translations>
