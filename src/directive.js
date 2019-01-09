@@ -8,7 +8,7 @@ export default function () {
     restrict: 'EA',
     template,
     scope: {
-      contracts: '=',
+      ovhContracts: '=',
       agree: '=contractsValidated',
     },
     controller,
@@ -67,7 +67,7 @@ export default function () {
           if (scrollItems === undefined) {
             scrollItems = menuItems.map(() => {
               const item = $($(this).attr('data-fake-href'));
-              if (initialOffSet === undefined) {
+              if (initialOffSet === undefined && item) {
                 initialOffSet = item.offset().top;
               }
               if (item.length) {
@@ -131,7 +131,7 @@ export default function () {
         }, 300);
       };
 
-      $scope.$watch(() => ContractsCtrl.contracts, (nv) => {
+      $scope.$watch(() => ContractsCtrl.ovhContracts, (nv) => {
         if (nv !== undefined) {
           init();
         }

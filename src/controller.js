@@ -22,6 +22,6 @@ export default class {
   }
 
   getContractAtIndex(index) {
-    return this.contracts[index];
+    return this.ovhContracts[index];
   }
 }
