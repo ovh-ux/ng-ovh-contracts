@@ -1,8 +1,13 @@
 export default class {
-  constructor() {
+  /* @ngInject */
+
+  constructor($scope) {
+    this.$scope = $scope;
+
     this.disabled = true;
     this.currentContract = undefined;
     this.fullText = '';
+    this.currentIndex = 0;
   }
 
   enable() {
@@ -17,11 +22,35 @@ export default class {
     this.fullText = fullText;
   }
 
-  setCurrentContract(contract) {
-    this.currentContract = contract;
-  }
-
   getContractAtIndex(index) {
     return this.contracts[index];
+  }
+
+  setCurrentIndex(index) {
+    this.currentIndex = index;
+  }
+
+  hasNextElement() {
+    return this.currentIndex + 1 < this.contracts.length;
+  }
+
+  hasPreviousElement() {
+    return this.currentIndex - 1 >= 0;
+  }
+
+  next() {
+    if (this.hasNextElement()) {
+      this.scroll(this.currentIndex + 1);
+    }
+  }
+
+  previous() {
+    if (this.hasPreviousElement()) {
+      this.scroll(this.currentIndex - 1);
+    }
+  }
+
+  scroll(index) {
+    this.$scope.scrollToContract(index);
   }
 }

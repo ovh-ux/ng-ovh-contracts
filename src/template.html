@@ -39,7 +39,7 @@
            data-translate="contract_list_title">
         </p>
         <div class="contracts-list">
-            <uib-accordion data-close-others="false" >
+            <uib-accordion data-close-others="false" data-ng-init="init()">
                 <uib-accordion-group id="contract-{{ $index }}"
                                      data-heading="{{ contract.name }}"
                                      data-is-open="true"
@@ -53,25 +53,26 @@
         <div class="contracts-breadcrumb text-center clearfix"
              role="navigation"
              data-ng-show="ContractsCtrl.contracts.length > 1">
-            <a class="pull-left contracts-breadcrumb-navigate contracts-breadcrumb-navigate-previous">
+            <button type="button" class="btn btn-link pull-left contracts-breadcrumb-navigate contracts-breadcrumb-navigate-previous" data-ng-click="ContractsCtrl.previous()" data-ng-disabled="!ContractsCtrl.hasPreviousElement()">
                 <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
                 <span data-translate="contract_previous"></span>
-            </a>
+            </button>
             <ul class="contracts-menu list-unstyled">
                 <li class="contracts-breadcrumb-navigate"
                     data-ng-repeat="contract in ContractsCtrl.contracts track by $index">
                     <a title="{{ contract.name }}"
-                       data-fake-href="#contract-{{ $index }}"
+                       data-href="#contract-{{ $index }}"
+                       data-ng-click="ContractsCtrl.scroll($index)"
                        data-ng-class="{
-                            'active' : ContractsCtrl.currentContract.name == contract.name
+                            'active' : $index === ContractsCtrl.currentIndex
                        }">
                     </a>
                 </li>
             </ul>
-            <a class="pull-right contracts-breadcrumb-navigate contracts-breadcrumb-navigate-next">
+            <button type="button" class="btn btn-link pull-right contracts-breadcrumb-navigate contracts-breadcrumb-navigate-next" data-ng-click="ContractsCtrl.next()" data-ng-disabled="!ContractsCtrl.hasNextElement()">
                 <span data-translate="contract_next"></span>
                 <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
-            </a>
+            </button>
         </div>
         <a class="contracts-link"
            title="{{ contract.name }}"
