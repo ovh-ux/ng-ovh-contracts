@@ -1,3 +1,12 @@
+# [3.0.0-beta.2](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2019-01-15)
+
+
+### Bug Fixes
+
+* **directive:** replace jquery.scrollto by animated-scroll-to ([dfe0a45](https://github.com/ovh-ux/ng-ovh-contracts/commit/dfe0a45))
+
+
+
 # [3.0.0-beta.1](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2019-01-08)
 
 
