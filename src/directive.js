@@ -9,8 +9,8 @@ export default /* @ngInject */ function ($timeout) {
     restrict: 'EA',
     template,
     scope: {
-      contracts: '=',
-      agree: '=contractsValidated',
+      ovhContracts: '=',
+      agree: '=ovhContractsValidated',
     },
     controller,
     controllerAs: 'ContractsCtrl',
@@ -33,7 +33,7 @@ export default /* @ngInject */ function ($timeout) {
         angular.element($elm.find('.contracts-list')[0]).bind('scroll', () => {
           let currentIndex;
 
-          ContractsCtrl.contracts.forEach((contract, index) => {
+          ContractsCtrl.ovhContracts.forEach((contract, index) => {
             if ($elm.find(`#contract-${index}`).position().top - initialContractsTopPosition <= 0) {
               currentIndex = index;
             }
