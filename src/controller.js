@@ -23,7 +23,7 @@ export default class {
   }
 
   getContractAtIndex(index) {
-    return this.contracts[index];
+    return this.ovhContracts[index];
   }
 
   setCurrentIndex(index) {
@@ -31,7 +31,7 @@ export default class {
   }
 
   hasNextElement() {
-    return this.currentIndex + 1 < this.contracts.length;
+    return this.currentIndex + 1 < this.ovhContracts.length;
   }
 
   hasPreviousElement() {
