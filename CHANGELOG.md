@@ -1,3 +1,33 @@
+# [3.0.0-beta.3](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.2...v3.0.0-beta.3) (2019-01-16)
+
+
+### Code Refactoring
+
+* **directive:** add missing ovh prefix ([1f49ebd](https://github.com/ovh-ux/ng-ovh-contracts/commit/1f49ebd))
+
+
+### BREAKING CHANGES
+
+* **directive:** directive name is now ovhContracts
+
+  Before:
+
+    <div
+      data-contracts="Credit.contracts"
+      data-full-text="false"
+      data-contracts-validated="Credit.contractsAccepted">
+    </div>
+
+  After:
+
+    <div
+      data-ovh-contracts="Credit.contracts"
+      data-full-text="false"
+      data-ovh-contracts-validated="Credit.contractsAccepted">
+    </div>
+
+
+
 # [3.0.0-beta.2](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2019-01-15)
 
 
