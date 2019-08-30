@@ -1,3 +1,12 @@
+# [3.0.0](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.3...v3.0.0) (2019-08-30)
+
+
+### Bug Fixes
+
+* **dev-deps:** upgrade some dev dependencies ([#21](https://github.com/ovh-ux/ng-ovh-contracts/issues/21)) ([0300945](https://github.com/ovh-ux/ng-ovh-contracts/commit/0300945))
+
+
+
 # [3.0.0-beta.3](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.2...v3.0.0-beta.3) (2019-01-16)
 
 
