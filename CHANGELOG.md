@@ -1,3 +1,7 @@
+## [3.0.1](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0...v3.0.1) (2019-11-05)
+
+
+
 # [3.0.0](https://github.com/ovh-ux/ng-ovh-contracts/compare/v3.0.0-beta.3...v3.0.0) (2019-08-30)
 
 
