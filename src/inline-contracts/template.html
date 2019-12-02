@@ -1,0 +1,17 @@
+<oui-checkbox
+    data-ng-if="$ctrl.contracts"
+    data-model="$ctrl.model"
+    data-required>
+        <span
+            data-ng-repeat="contract in $ctrl.contracts track by $index"
+            data-translate="{{
+                $first && $last && 'ovh_inline_contracts_label_unique'
+                || $first && !$last && 'ovh_inline_contracts_label_first'
+                || !$first && !$last && 'ovh_inline_contracts_label_next'
+                || !$first && $last && 'ovh_inline_contracts_label_last'
+            }}"
+            data-translate-values="{
+                contract: '<a href=\'' + contract.url + '\' rel=\'noopener\' target=\'_blank\' title=\'' + contract.name + + '(' + ('ovh_inline_contracts_new_tab' | translate) + ')\'>' + contract.name + '</a>'
+            }">
+        </span>
+</oui-checkbox>

@@ -1,0 +1,7 @@
+{
+  "ovh_inline_contracts_label_unique": "Je reconnais avoir bien pris connaissance des {{ contract }}.",
+  "ovh_inline_contracts_label_first": "Je reconnais avoir bien pris connaissance des {{ contract }},",
+  "ovh_inline_contracts_label_next": "et des {{ contract }},",
+  "ovh_inline_contracts_label_last": "et des {{ contract }}.",
+  "ovh_inline_contracts_new_tab": "(S'ouvre dans un nouvel onglet)"
+}

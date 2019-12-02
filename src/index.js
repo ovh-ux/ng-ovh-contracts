@@ -11,6 +11,7 @@ import 'angular-translate';
 import 'angular-ui-bootstrap';
 
 import directive from './directive';
+import inlineContracts from './inline-contracts';
 
 import './index.less';
 
@@ -20,6 +21,7 @@ angular
   .module(moduleName, [
     'pascalprecht.translate',
     'ui.bootstrap',
+    inlineContracts,
   ])
   .directive('ovhContracts', directive)
   .run(/* @ngTranslationsInject ./translations */);
